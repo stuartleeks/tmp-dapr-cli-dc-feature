@@ -7,7 +7,7 @@ Install the Dapr CLI
 
 ```json
 "features": {
-    "ghcr.io/stuartleeks/dev-container-features-playground/dapr-cli:0": {}
+    "ghcr.io/stuartleeks/tmp-dapr-cli-dc-feature/dapr-cli:0": {}
 }
 ```
 
@@ -21,4 +21,4 @@ Install the Dapr CLI
 
 ---
 
-_Note: This file was auto-generated from the [devcontainer-feature.json](https://github.com/stuartleeks/dev-container-features-playground/blob/main/src/dapr-cli/devcontainer-feature.json).  Add additional notes to a `NOTES.md`._
+_Note: This file was auto-generated from the [devcontainer-feature.json](https://github.com/stuartleeks/tmp-dapr-cli-dc-feature/blob/main/dev-container-feature/src/dapr-cli/devcontainer-feature.json).  Add additional notes to a `NOTES.md`._
