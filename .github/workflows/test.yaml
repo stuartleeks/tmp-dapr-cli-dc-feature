@@ -6,6 +6,7 @@ on:
   pull_request:
     paths:
       - "dev-container-feature/**"
+      - .github/workflows/**
   workflow_dispatch:
 
 jobs:
