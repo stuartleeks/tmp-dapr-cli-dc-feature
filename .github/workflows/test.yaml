@@ -15,8 +15,7 @@ jobs:
     strategy:
       matrix:
         features:
-          - color
-          - hello
+          - dapr-cli
         baseImage:
           - debian:latest
           - ubuntu:latest
