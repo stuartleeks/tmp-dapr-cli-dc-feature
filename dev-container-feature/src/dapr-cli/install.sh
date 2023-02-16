@@ -42,7 +42,14 @@ if [ "${VERSION}" = "latest" ]; then
   VERSION=$(get_latest_release)
 fi
 
-curl -SsL https://github.com/dapr/cli/releases/download/v"${VERSION}"/dapr_linux_amd64.tar.gz | \
+ARCH=$(uname -m)
+case $ARCH in
+    armv7*) ARCH="arm";;
+    aarch64) ARCH="arm64";;
+    x86_64) ARCH="amd64";;
+esac
+
+curl -SsL "https://github.com/dapr/cli/releases/download/v${VERSION}/dapr_linux_${ARCH}.tar.gz" | \
      tar -zx -C /usr/local/bin dapr
 
 dapr --version
