@@ -63,3 +63,5 @@ source '$_REMOTE_USER_HOME/.dapr/completion.bash.inc'
 " >> $_REMOTE_USER_HOME/.bashrc
 chown -R $_REMOTE_USER:$_REMOTE_USER $_REMOTE_USER_HOME/.dapr
 chown $_REMOTE_USER:$_REMOTE_USER $_REMOTE_USER_HOME/.bashrc
+
+echo "dapr-cli feature done."
