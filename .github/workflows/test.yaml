@@ -6,6 +6,7 @@ on:
   pull_request:
     paths:
       - "dev-container-feature/**"
+      - .github/workflows/**
   workflow_dispatch:
 
 jobs:
@@ -15,8 +16,7 @@ jobs:
     strategy:
       matrix:
         features:
-          - color
-          - hello
+          - dapr-cli
         baseImage:
           - debian:latest
           - ubuntu:latest
@@ -30,14 +30,14 @@ jobs:
       - name: "Generating tests for '${{ matrix.features }}' against '${{ matrix.baseImage }}'"
         run: devcontainer features test --skip-scenarios -f ${{ matrix.features }} -i ${{ matrix.baseImage }} ./dev-container-feature
 
+
   test-scenarios:
     runs-on: ubuntu-latest
     continue-on-error: true
     strategy:
       matrix:
         features:
-          - color
-          - hello
+          - dapr-cli
     steps:
       - uses: actions/checkout@v3
 
@@ -58,3 +58,4 @@ jobs:
 
       - name: "Testing global scenarios"
         run: devcontainer features test --global-scenarios-only ./dev-container-feature
+
